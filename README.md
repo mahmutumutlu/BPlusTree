@@ -27,3 +27,37 @@ The GUI-related classes (`CengGUI.java`, etc.) are provided but **not modified**
 ### Compile all Java files
 ```bash
 javac *.java
+```
+### Run the program
+
+```bash
+java CengScholar <order> <guiOptions> <inputFileName>
+```
+
+### Parameters
+
+- `<order>`: Order (d) of the B+ trees (integer).
+
+- `<guiOptions>`:
+  - `0`: No GUI (default for grading)
+  - `1`: Only Primary Tree GUI
+  - `2`: Only Secondary Tree GUI
+  - `3`: Both GUIs
+
+- `<inputFileName>`: Input file name containing commands (`add`, `search1`, `search2`, `print1`, `print2`, `quit`).
+
+##Example Usage
+```bash
+java CengScholar 2 0 sampleInput.txt
+```
+This command runs the program with tree order 2, no GUI, using `sampleInput.txt` as input.
+
+### Input Commands
+
+- `add|<paperId>|<journal>|<title>|<author>|`
+- `search1|<paperId>`
+- `search2|<journal>`
+- `print1`
+- `print2`
+- `quit`
+
